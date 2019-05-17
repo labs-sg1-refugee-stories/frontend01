@@ -1,8 +1,6 @@
 # Refugee Stories - Frontend
 Frontend for Refugee Stories Labs SG1
 
-# Title of project goes here
-
 🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline. Feel free to add your own flare to it.
 
 ## Contributors
