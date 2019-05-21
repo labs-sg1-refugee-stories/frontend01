@@ -7,8 +7,9 @@ export const LOGIN_ABSOLUTE_FAILURE = 'LOGIN_ABSOLUTE_FAILURE';
 
 export const login = creds => dispatch => {
   dispatch({ type: LOGIN_START });
+  console.log(creds);
   return axios
-    .post('https://refugee-stories-api.herokuapp.com/stories', creds)
+    .post('https://refugee-stories-api.herokuapp.com/login', creds)
     .then(res => {
       localStorage.setItem('token', res.data.payload);
       dispatch({ type: LOGIN_SUCCESS, payload: res.data.payload });

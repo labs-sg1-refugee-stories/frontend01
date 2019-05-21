@@ -12,7 +12,7 @@ import reducer from '../src/mainLogOnPage/reducers';
 const store = createStore(reducer, applyMiddleware(thunk));
 
 const rootElement = document.getElementById('root');
-React.DOM.render(
+ReactDOM.render(
     <Provider store={store}>
         <App />
     </Provider>,

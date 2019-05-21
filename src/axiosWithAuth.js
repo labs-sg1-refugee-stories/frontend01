@@ -7,6 +7,6 @@ export const axiosWithAuth = () => {
       // 'Content-Type': 'application/json'
       Authorization: token
     },
-    baseURL: 'https://refugee-stories-api.herokuapp.com/stories'
+    baseURL: 'https://refugee-stories-api.herokuapp.com'
   });
 };

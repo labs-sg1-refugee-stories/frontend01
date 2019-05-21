@@ -1,10 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { NavLink, BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import PrivateRoute from './PrivateRoute';
 import Login from './mainLogOnPage/components/Login';
 import PostMessage from './mainLogOnPage/components/PostMessage'
 
+import styled from 'styled-components';
+
+c
+`
 
 function App() {
   return (
@@ -12,10 +16,10 @@ function App() {
       <div className="App">
         <ul>
           <li>
-            <Link to="/login">Login</Link>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <Link to="/PostMessage">Admin Access</Link>
+            <NavLink to="/PostMessage">Admin Access</NavLink>
           </li>
         </ul>
         <Route path="/login" component={Login} />
