@@ -45,7 +45,5 @@ import {
         return state;
     }
   };
-  
+
   export default reducer;
-  
-  

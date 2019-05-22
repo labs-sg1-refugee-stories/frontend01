@@ -1,10 +1,16 @@
 import React from 'react';
+
+import '../../src/App.css';
+
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 
-import { login } from '../actions';
+import { login } from '../actions/index';
 
-class Login extends React.Component {
+import { Button, Form, FormGroup, Label, Input }
+  from 'reactstrap';
+
+class AdminLogin extends React.Component {
   state = {
     credentials: {
       username: '',
@@ -30,32 +36,42 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.login}>
-          <input
+      <Form className="login-form">
+        <h1>
+          <span className="font-weight-bold">Refugee Stories Authorize User </span>
+        </h1>
+        <h2 className="text-center">Welcome</h2>
+        <FormGroup onSubmit={this.login}>
+          <Label>UserName</Label>
+          <Input 
             type="text"
             name="username"
-            value={this.state.credentials.username}
+            value={this.state.credentials.username} 
             onChange={this.handleChange}
           />
-          <input
-            type="password"
+        </FormGroup>
+        <FormGroup>
+          <Label>Password</Label>
+          <Input 
+            type="password" 
             name="password"
             value={this.state.credentials.password}
             onChange={this.handleChange}
           />
-          <button>
-            {this.props.isLoggingIn ? (
-              <Loader type="ThreeDots" color="#1f2a38" height="12" width="26" />
-            ) : (
+        </FormGroup>
+        <Button className="btn-lg btn-dark btn-block">
+        {this.props.isLoggingIn ? (
+            <Loader type="ThreeDots" color="#1f2a38" height="12" width="26" />
+        ) : (
               'Log in'
             )}
-          </button>
-        </form>
-      </div>
+        </Button>
+      </Form>
     );
   }
 }
+
+   
 
 const mapStateToProps = state => ({
   isLoggingIn: state.isLoggingIn
@@ -64,4 +80,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { login }
-)(Login);
+)(AdminLogin);
