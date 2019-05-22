@@ -4,12 +4,11 @@ import axios from "axios";
 export function fetchMessages() {
   return dispatch => {
     dispatch({ type: "LOADING_MESSAGES" });
-    return;
     axios
       .get("https://refugee-stories-api.herokuapp.com/stories")
       .then(responseJSON => {
-        console.log("Fetched messages: ", responseJSON);
-        dispatch({ type: "FETCH_MESSAGES", payload: responseJSON });
+        console.log("Fetched messages: ", responseJSON.data);
+        dispatch({ type: "FETCH_MESSAGES", payload: responseJSON.data });
       });
   };
 }

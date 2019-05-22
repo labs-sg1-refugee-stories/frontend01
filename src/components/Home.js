@@ -1,5 +1,5 @@
 import React from 'react';
-import refugeegate from '../img/refugee-gate.jpg';
+import refugeegate from '../img/index.jpg';
 
 const Home = () => {
 
@@ -7,7 +7,7 @@ const Home = () => {
     <div className="homepage">
       <div className="image-container">
         <img src={refugeegate} alt="homepage"/>
-        <homepage />
+        
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import MessagesList from '../components/MessagesList';
 import { fetchMessages } from '../actions/messagesActions';
 import MessagesNew from './MessagesNew';
 import MessageShow from './MessageShow';
+import axios from 'axios';
 
 class MessageBoardPage extends Component {
     componentDidMount() {
@@ -31,7 +32,7 @@ class MessageBoardPage extends Component {
                 <Switch>
                     <Route exact path={`${match.url}/new`} component={MessagesNew} />
                     <Route path={`${match.url}/:messageId`} component={MessageShow}/>
-                    <Route exact path={match.url} render={() => <MessagesList messages={messages} />} />
+                    <Route exact path={match.url} render={(props) => <MessagesList messages={messages} />} />
                 </Switch>
             </div>
         );

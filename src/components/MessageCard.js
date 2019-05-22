@@ -1,13 +1,13 @@
 import React from 'react';
 
 const MessageCard = ({ message }) => {
-  const { name, country, storytext, title } = message;
+    const { name, country, storytext, title } = message;
 
-  const longMessage =  storytext.length > 140;
+   const longMessage = storytext.length > 140;
 
   return (
     <div className="message-card">
-        { (name || country) ?
+    { (name || country) ?
             <div className="message-card-header">
               {name ? <span className="name">{name}</span> : null }
               {title ? <span className="name"> {title}</span> : null }
@@ -23,5 +23,8 @@ const MessageCard = ({ message }) => {
     </div>
   );
 };
+        
+        
+
 
 export default MessageCard;
