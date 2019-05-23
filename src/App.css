@@ -216,3 +216,7 @@ input:focus {
   margin-top: 100px;
 
 }
+
+.ui card {
+  margin-top: 25px;
+}

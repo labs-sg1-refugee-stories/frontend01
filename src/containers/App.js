@@ -9,6 +9,9 @@ import Home from '../components/Home';
 import '../App.css';
 import AdminLogin from './AdminLogin';
 
+import AdminContainer from './AdminContainer';
+
+
 class App extends Component {
   render() {
     return (
@@ -18,6 +21,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path='/messages' component={MessageBoardPage}/>
           <Route path='/adminLogin' component={AdminLogin}/>
+          <Route path='/adminContainer' component={AdminContainer}/>
         </div>
       </Router>
     );

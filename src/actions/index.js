@@ -23,9 +23,9 @@ export const FETCH_POSTMESSAGE_FAILURE = 'FETCH_POSTMESSAGE_FAILURE';
 export const getData = () => dispatch => {
   dispatch({ type: FETCH_POSTMESSAGE_START });
   axiosWithAuth()
-    .get('/api/data')
+    .get('https://refugee-stories-api.herokuapp.com/stories')
     .then(res => {
-      dispatch({ type: FETCH_POSTMESSAGE_SUCCESS, payload: res.data.data });
+      dispatch({ type: FETCH_POSTMESSAGE_SUCCESS, payload: res.data });
     })
     .catch(err => {
       dispatch({ type: FETCH_POSTMESSAGE_FAILURE });

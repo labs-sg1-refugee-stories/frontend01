@@ -38,7 +38,7 @@ import {
           ...state,
           fetchingData: false,
           error: '',
-          messagePost: action.payload
+          messagesPost: action.payload
     
         };
       default:

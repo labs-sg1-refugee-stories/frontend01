@@ -39,13 +39,13 @@ class MessagesNew extends Component {
               className="new-sender"
               name="name"
               onChange={this.handleOnChange} 
-              placeholder="Sender Name" />
+              placeholder=" Name" />
               <input 
               type="text"
               className="new-sender"
               name="country"
               onChange={this.handleOnChange} 
-              placeholder="country" />
+              placeholder="Country" />
             <input 
               type="text"
               className="new-recipient"
@@ -62,7 +62,7 @@ class MessagesNew extends Component {
               placeholder="Message" />
             <input 
               type="submit" 
-              value="Add Message" 
+              value="Submit" 
               className="new-message-button"
               onChange={this.handleOnChange} 
               disabled={!this.state.storytext}
