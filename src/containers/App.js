@@ -10,6 +10,7 @@ import '../App.css';
 import AdminLogin from './AdminLogin';
 
 import AdminContainer from './AdminContainer';
+import PrivateRoute from '../privateRoute';
 
 
 class App extends Component {
@@ -21,8 +22,9 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path='/messages' component={MessageBoardPage}/>
           <Route path='/adminLogin' component={AdminLogin}/>
+          <PrivateRoute exact path="/protected" component={AdminContainer} />
+          </div>
           <Route path='/adminContainer' component={AdminContainer}/>
-        </div>
       </Router>
     );
   }

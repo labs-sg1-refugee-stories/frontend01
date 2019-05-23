@@ -10,17 +10,22 @@ const MessageCard = ({ message }) => {
             { (name || country) ?
                 <div className="message-card-header">
                   {name ? <span className="name">{name}</span> : null }
-                  {title ? <span className="name"> {title}</span> : null }
+                  <div>
                   {country ? <span className="name"> {country}</span> : null }
-                  {storytext ? <span className="name"> {storytext}</span> : null }
+                  </div>
                 </div>
                 : null
             }
     
             <div className="message-card-main">
+                  {title ? <span className="name"> {title}</span> : null }
+            </div>
+            <div>
+                  {storytext ? <div className="name"> {storytext}</div> : null }
+                </div>
               {longMessage ? `${ storytext.slice(0, 140)}...` :  storytext}
             </div>
-        </div>
+        
       );
     };
         

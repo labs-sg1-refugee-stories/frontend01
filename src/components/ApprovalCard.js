@@ -1,10 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+// import  fetchMessages from '../actions/messagesActions';
 
 
 const ApprovalCard = (props) => {
     return (
         <div className="ui card">
-            <div className="content">{props.message.title}</div>
+            <div className="content">{props.message.name}
+            </div>
+            <div className="content">
+                {props.message.title}   
+            </div>
+            <div className="content">
+                {props.message.storytext}   
+            </div>
                 <div className="extra content">
                     <div className="ui two buttons">
                     <div className="ui basic green button" onClick = { () => {
@@ -27,3 +37,4 @@ const ApprovalCard = (props) => {
 
 
 export default ApprovalCard;
+   

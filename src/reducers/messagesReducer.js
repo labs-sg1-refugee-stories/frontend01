@@ -22,12 +22,14 @@ export default (state = {
           
         case 'FETCH_MESSAGES':
           return {
+            ...state,
             messages: action.payload,
             isFetching: false
           }
 
           case 'FETCH_MESSAGES_PENDING':
           return {
+            ...state,
             messagesPending: action.payload,
             isFetching: false
           }
@@ -47,15 +49,16 @@ export default (state = {
           case 'APROVE_MESSAGE_SUCCESS':
           return {
             ...state,
-            messagesPending: state.messagesPending.filter( (message) => {
-              return message.id != action.payload
-            }), 
-            isPosting: false
+            messagesPending : state.messagesPending.filter( (message) => {
+                return message.id !== action.payload
+            }),
+            isPosting: true
           }
 
   
         case 'ADD_MESSAGE_SUCCESS':
           return {
+            ...state,
             messages: state.messages.concat(action.payload), 
             isPosting: false
           }
@@ -69,6 +72,7 @@ export default (state = {
         case 'DELETE_MESSAGE_SUCCES':
           const messages = state.messages.filter(message => message.id !== parseInt(action.deletedMessageId, 10));
           return { 
+            ...state,
             messages, 
             isDeleting: false
           };

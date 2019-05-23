@@ -28,20 +28,22 @@ class AdminLogin extends React.Component {
   };
 
   login = e => {
+    console.log(login);
     e.preventDefault();
     this.props.login(this.state.credentials).then(() => {
-      this.props.history.push('/PostMessage');
+      this.props.history.push('/ApprovalCard');
     });
   };
 
   render() {
     return (
-      <Form className="login-form">
-        <h1>
-          <span className="font-weight-bold">Refugee Stories Authorize User </span>
+      <Form className="login-form" onSubmit={this.login}>
+        <h1 className="text-center">
+          <span className="font-weight-bol">Authorize User </span>
         </h1>
         <h2 className="text-center">Welcome</h2>
-        <FormGroup onSubmit={this.login}>
+        <FormGroup 
+        >
           <Label>UserName</Label>
           <Input 
             type="text"

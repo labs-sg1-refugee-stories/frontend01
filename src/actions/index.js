@@ -11,7 +11,7 @@ export const login = creds => dispatch => {
   return axios
     .post('https://refugee-stories-api.herokuapp.com/login', creds)
     .then(res => {
-      localStorage.setItem('token', res.data.payload);
+      localStorage.setItem('token', res.data.token);
       dispatch({ type: LOGIN_SUCCESS, payload: res.data.payload });
     })
     .catch(err => console.log(err));

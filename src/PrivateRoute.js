@@ -1,6 +1,7 @@
 import React from 'react';
-import { Route  } from 'react-router-dom';
-// Redirect
+import { Route, Redirect  } from 'react-router-dom';
+
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
@@ -10,7 +11,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
           return <Component />;
         } else {
           return <Component />;
-          // return <Redirect to="/login" />;
+          return <Redirect to="/AdminLogin" />;
         }
       }}
     />

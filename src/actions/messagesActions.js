@@ -1,6 +1,8 @@
 import fetch from "isomorphic-fetch";
 import axios from "axios";
 
+
+
 export function fetchMessages() {
   return dispatch => {
     dispatch({ type: "LOADING_MESSAGES" });
@@ -39,9 +41,11 @@ export function addMessage(message) {
   console.log("Formatted message: ", newMessage);
 
   return dispatch => {
+    const token = localStorage.getIteam('token');
+
     dispatch({ type: "ADDING_MESSAGE" });
     axios
-      .post("https://refugee-stories-api.herokuapp.com/admin/stories", message)
+      .post("https://refugee-stories-api.herokuapp.com/admin/stories", message ,{headers: { authorization : token}  })
       .then(response => {
         dispatch({ type: "ADD_MESSAGE_SUCCESS", payload: message });
       });
