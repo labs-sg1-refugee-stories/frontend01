@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect  } from 'react-router-dom';
 
 
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
@@ -10,8 +11,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         if (localStorage.getItem('token')) {
           return <Component />;
         } else {
-          return <Component />;
-          return <Redirect to="/AdminContainer" />;
+          return <Redirect to="/login" />;
         }
       }}
     />
