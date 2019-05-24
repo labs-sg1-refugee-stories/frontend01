@@ -21,10 +21,9 @@ class App extends Component {
           <NavBar />
           <Route exact path="/" component={Home} />
           <Route path='/messages' component={MessageBoardPage}/>
-          <Route path='/adminLogin' component={AdminLogin}/>
-          <PrivateRoute exact path="/protected" component={AdminContainer} />
+          <Route path='/AdminLogin' component={AdminLogin}/>
+          <PrivateRoute exact path="/AdminContainer" component={AdminContainer} />
           </div>
-          <Route path='/adminContainer' component={AdminContainer}/>
       </Router>
     );
   }

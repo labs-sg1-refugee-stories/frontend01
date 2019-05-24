@@ -31,7 +31,7 @@ class AdminLogin extends React.Component {
     console.log(login);
     e.preventDefault();
     this.props.login(this.state.credentials).then(() => {
-      this.props.history.push('/ApprovalCard');
+      this.props.history.push('/AdminContainer');
     });
   };
 

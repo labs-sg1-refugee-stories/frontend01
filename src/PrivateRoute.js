@@ -11,7 +11,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
           return <Component />;
         } else {
           return <Component />;
-          return <Redirect to="/AdminLogin" />;
+          return <Redirect to="/AdminContainer" />;
         }
       }}
     />

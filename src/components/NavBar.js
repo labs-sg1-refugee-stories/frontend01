@@ -28,7 +28,7 @@ const NavBar = props => {
 
       <NavLink 
         className="NavLink"
-        to="/adminLogin"
+        to="/AdminLogin"
         exact
       >
         Admin Acce
@@ -36,7 +36,7 @@ const NavBar = props => {
       
       <NavLink
       className="NavLink"
-      to="/approvalCard"
+      to="/AdminContainer"
       exact
       >
       Admin Page

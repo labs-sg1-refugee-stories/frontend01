@@ -41,7 +41,7 @@ export function addMessage(message) {
   console.log("Formatted message: ", newMessage);
 
   return dispatch => {
-    const token = localStorage.getIteam('token');
+    const token = localStorage.getItem('token');
 
     dispatch({ type: "ADDING_MESSAGE" });
     axios
