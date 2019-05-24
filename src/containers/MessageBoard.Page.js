@@ -5,7 +5,7 @@ import MessagesList from '../components/MessagesList';
 import { fetchMessages } from '../actions/messagesActions';
 import MessagesNew from './MessagesNew';
 import MessageShow from './MessageShow';
-import axios from 'axios';
+
 
 class MessageBoardPage extends Component {
     componentDidMount() {

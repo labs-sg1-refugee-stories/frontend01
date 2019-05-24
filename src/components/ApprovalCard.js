@@ -1,7 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-// import  fetchMessages from '../actions/messagesActions';
+
 
 
 const ApprovalCard = (props) => {

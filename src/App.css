@@ -6,7 +6,8 @@ body {
   letter-spacing: 0;
   /* background: linear-gradient(to right, #e0eafc, #cfdef3); */
   color: #4a4a4a;
-  background: url("./img/cloth-clothesline-doors-917377.jpg");
+  background-image: url("./img/logo.png");
+  background-size: cover;
   box-sizing: border-box;
 }
 
@@ -27,14 +28,14 @@ body {
 
 .NavLink {
   text-decoration: none;
-  color: #777;
+  color: #f3e0dc;
   margin: 0 20px;
   margin-bottom: 100px;
 }
 
 .NavLink:hover, .NavLink:active, .NavLink.active {
-  color: #673ab7;
-  border-bottom-color: #673ab7;
+  color:#4285f4;
+  border-bottom-color:#4285f4;
 }
 
 

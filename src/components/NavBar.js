@@ -23,7 +23,7 @@ const NavBar = props => {
         to="/messages/new"
         exact
       >
-        Share your Story!
+        New Message
       </NavLink>
 
       <NavLink 
@@ -33,17 +33,20 @@ const NavBar = props => {
       >
         Admin Acce
       </NavLink>
-
+      
       <NavLink
       className="NavLink"
-      to="/adminContainer"
+      to="/approvalCard"
       exact
       >
       Admin Page
       </NavLink>
 
+      </div>
+     
 
-    </div>
+
+    
   );
 }
 
